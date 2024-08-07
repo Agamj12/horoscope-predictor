@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <!-- Set viewport -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ace of Pentacles</title>
+  <!-- Set Favicon -->
+  <link rel="shortcut icon" href="./assets/css-images/favicon.ico" type="image/x-icon">
+  <!-- Import Materialize -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <!-- Import Fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,500;0,600;1,500;1,600;1,700&family=Montserrat:wght@300;400&display=swap"
+    rel="stylesheet">
+  <!-- Import local CSS -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <!-- Import Materialize icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+</head>
+
+<!-- Navbar -->
+
+<body>
+  <header>
+    <div class="navbar-fixed" id="navbar">
+      <nav>
+        <div class="nav-wrapper">
+          <a href="index.html" id="navbarAce" class="brand-logo">Ace of Pentacles</a>
+          <ul class="right hide-on-med-and-down">
+            <li><a href="aboutTarot.html">About Tarot</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+      </nav>
+  </header>
+
+  <!-- Welcome Carousel Slides -->
+  <div class="container" id="main" style="position: sticky; margin-top:150px">
+    <div class="carousel carousel-slider center">
+
+      <a id="carousel-prev" class="movePrevCarousel controlButton waves-effect left"><i
+          class="arrow buttonleft"></i></a>
+
+      <a id="carousel-next" class="moveNextCarousel controlButton waves-effect right"><i
+          class="arrow buttonright"></i></a>
+      <!-- Slide 1 -->
+      <div class="carousel-item white-text" href="#one!" data-slide-to="0">
+        <span class="icon-prev" aria-hidden="true"></span>
+        <h2>Welcome to the Ace of Pentacles</h2>
+        <p class="white-text">This site is for the seeker of truth and insight with the magic of Tarot.</p>
+
+        <p class="white-text">Our website allows you to choose between two tarot card spreads for your reading.</p>
+        <p class="white-text">Choose your spread based on the question you would like to have answered.</p>
+        <p class="white-text">Each spread is created from a random shuffle of the deck with the full 78 card spread.</p>
+        <p class="white-text">It’s time to connect with your intuition and create your future. Pick your spread and Make
+          magic, my friend! 
+        </p>
+      </div>
+
+      <!-- Slide 2 -->
+      <div class="carousel-item white-text" href="#two!" data-slide-to="1">
+        <h2>Past Present Future Spread</h2>
+        <p class="white-text">This type of spread is for those seaking insight into how a situation has progressed or
+          regressed over time.</p>
+        <p class="white-text">This spread gives you an idea of where you have been and how that effects where you are
+          going in life.</p>
+        <p class="white-text">Click the button below to get a past, present, future reading.</p>
+        <button class="ppfBtn btn waves-effect darken-text-2">Get Reading</button>
+      </div>
+      <div class="carousel-item white-text" href="#three!" data-slide-to="2">
+
+        <!-- Slide 3 -->
+        <h2>Celtic Cross Spread</h2>
+        <p class="white-text">This spread is a common spread used when you have a specific question you need answered.
+        </p>
+        <p class="white-text">It will take you step by step through the different aspects of your question.</p>
+        <p class="white-text">The spread will deal with one issue at a time with each card dealing with each issue
+          related to your situation.</p>
+        <p class="white-text">Think of the question you need answered and click the button to get your reading.</p>
+        <button class="btn" onclick="location.href='celtic.html'">Get reading</button>
+      </div>
+      <div class="carousel-item white-text" href="#four!" data-slide-to="4">
+
+        <!-- Slide 4 -->
+        <h2>Horoscope</h2>
+        <p class="white-text"> If you are just not ready to use Tarot you could also check on your Horoscope.
+        </p>
+        <p class="white-text">Horoscopes give you information on your present situation depending on your Zodiac.</p>
+        <p class="white-text">Your Zodiac sign is specific to your date of birth.</p>
+        <p class="white-text">Enter your birth day, click the button, and make magic, my friend!</p>
+        <button class='btn' onclick="location.href='horoscope.html'">Get reading</button>
+      </div>
+    </div>
+
+    <!-- Past Present Future 3 Card Spread -->
+    <div class="row">
+      <div class="col s2" id="detailsCard" style="visibility: hidden;">
+        <div class="card-panel" id="infoCard">
+          <span class="white-text">
+            <h1 style="font-size: x-large; text-align: center;">Past Present Future Tarot Card Reading</h1>
+            <p>Click the back of a card to get your past, present and future reading. Click the card title to see more
+              information about each card.</p>
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Three card spread row -->
+    <div class="row ppfCards" style="visibility: hidden;">
+
+      <!-- Card 1 - Past -->
+      <div class='card col s4'>
+        <div class='card-image waves-effect waves-block waves-light'>
+          <img id='0' src=./assets/card-images/card-back.jpg> </div> <div class='card-content'>
+          <span class='card-title activator' id="title0">Past<i class="material-icons right">more_vert</i></span>
+        </div>
+        <div class='card-reveal'>
+          <span class='card-title grey-text'><i class='material-icons right'>close</i></span>
+          <p id="reveal0"></p>
+        </div>
+      </div>
+
+      <!-- Card 2 - Present -->
+      <div class='card col s4'>
+        <div class='card-image waves-effect waves-block waves-light'>
+          <img id='1' src=./assets/card-images/card-back.jpg> </div> <div class='card-content'>
+          <span class='card-title activator' id='title1'>Present<i class='material-icons right'>more_vert</i></span>
+        </div>
+        <div class='card-reveal'>
+          <span class='card-title grey-text'><i class='material-icons right'>close</i></span>
+          <p id="reveal1"></p>
+        </div>
+      </div>
+
+      <!-- Card 3 - Future -->
+      <div class='card col s4'>
+        <div class='card-image waves-effect waves-block waves-light'>
+          <img id='2' src=./assets/card-images/card-back.jpg> </div> <div class='card-content'>
+          <span class='card-title activator' id='title2'>Future<i class='material-icons right'>more_vert</i></span>
+        </div>
+        <div class='card-reveal'>
+          <span class='card-title grey-text text-darken-4'><i class='material-icons right'>close</i></span>
+          <p id="reveal2"></p>
+        </div>
+      </div>
+    </div>
+    <div class="row ppfInfo" style="visibility: hidden"></div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="page-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="navColor">Ace of Pentacles</h5>
+          <p class="grey-text text-lighten-4">Make magic, my friend!</p>
+        </div>
+        <div class="col l4 offset-l2 s12">
+          <h5 class="navColor">Links</h5>
+          <ul>
+            <li><a class="grey-text text-lighten-3" href="aboutTarot.html">About Tarot</a></li>
+            <li><a class="grey-text text-lighten-3" href="contact.html">Contact Us</a></li>
+            <li><a class="grey-text text-lighten-3" href="horoscope.html">Horoscopes</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+        © 2020 Copyright Ace of Pentacles
+
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- Import Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="./assets/js/script.js"></script>
+
+</body>
+
+</html>
